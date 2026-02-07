@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Информация и Услуги</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background: linear-gradient(90deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 0.5rem;
+        }
+
+        nav a:hover {
+            color: #e74c3c;
+            border-bottom-color: #e74c3c;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .page-title {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+        }
+
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-top: 4px solid #e74c3c;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.2);
+        }
+
+        .service-card h3 {
+            color: #e74c3c;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .service-card p {
+            color: #555;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .price-tag {
+            background: linear-gradient(90deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            font-size: 1.1rem;
+        }
+
+        .info-section {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .info-section h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .info-section p {
+            color: #555;
+            line-height: 1.9;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2.5rem;
+            margin-top: 3rem;
+            border-top: 3px solid #e74c3c;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+            }
+
+            .page-title {
+                font-size: 1.8rem;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">💼 MyWeb</div>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="info.html">Информация</a></li>
+                <li><a href="contact.html">Контакт</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="page-title">Наши услуги</h1>
+        <p class="page-subtitle">Полный спектр решений для вашего бизнеса</p>
+
+        <section class="services-container">
+            <div class="service-card">
+                <h3>📱 Веб-дизайн и разработка</h3>
+                <p>Создание современных, адаптивных веб-сайтов с использованием передовых технологий. Мы берем на себя полный процесс от концепции до запуска.</p>
+                <div class="price-tag">От 500€</div>
+            </div>
+
+            <div class="service-card">
+                <h3>🎨 Графический дизайн</h3>
+                <p>Разработка логотипов, брендбуков, макетов и иного визуального контента. Наши дизайнеры создают уникальный стиль для вашей компании.</p>
+                <div class="price-tag">От 300€</div>
+            </div>
+
+            <div class="service-card">
+                <h3>🔍 SEO и цифровой маркетинг</h3>
+                <p>Оптимизация вашего сайта для поисковых систем и проведение маркетинговых кампаний. Увеличиваем видимость вашего бизнеса в интернете.</p>
+                <div class="price-tag">От 400€/мес</div>
+            </div>
+
+            <div class="service-card">
+                <h3>🛠️ Техническая поддержка</h3>
+                <p>Круглосуточная техническая поддержка вашего сайта и приложений. Оперативно решаем любые технические проблемы и выполняем обновления.</p>
+                <div class="price-tag">От 100€/мес</div>
+            </div>
+
+            <div class="service-card">
+                <h3>📱 Мобильные приложения</h3>
+                <p>Разработка нативных приложений для iOS и Android. Полный цикл разработки, тестирования и развертывания в App Store и Google Play.</p>
+                <div class="price-tag">От 800€</div>
+            </div>
+
+            <div class="service-card">
+                <h3>💼 Консультации</h3>
+                <p>Экспертные консультации по цифровой трансформации вашего бизнеса. Помогаем выбрать правильные инструменты и стратегии развития.</p>
+                <div class="price-tag">От 200€</div>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <h2>почему наши услуги эффективны?</h2>
+            <p>Мы сочетаем глубокие технические знания с пониманием бизнес-процессов. Каждый проект рассматривается индивидуально, и мы разрабатываем решения, которые точно соответствуют вашим потребностям и целям.</p>
+            <p>Наша команда постоянно следит за новыми технологиями и регулярно повышает квалификацию, чтобы предоставлять вам самые современные решения. Мы гордимся высоким процентом удовлетворенных клиентов и долгосрочными партнерскими отношениями.</p>
+        </section>
+
+        <section class="info-section">
+            <h2>Наш процесс работы</h2>
+            <p><strong>1. Консультация:</strong> Изучаем ваши требования и задачи, проводим анализ конкурентов и рынка.</p>
+            <p><strong>2. Планирование:</strong> Разрабатываем детальный план проекта с четкими сроками и бюджетом.</p>
+            <p><strong>3. Разработка:</strong> Наша команда выполняет работу в соответствии с согласованным планом, регулярно предоставляя обновления.</p>
+            <p><strong>4. Тестирование:</strong> Тщательная проверка качества всех компонентов перед запуском.</p>
+            <p><strong>5. Запуск и поддержка:</strong> Развертывание проекта и обеспечение постоянной технической поддержки.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 MyWeb. Все права защищены.</p>
+        <p>Контакт: info@myweb.ru | +7 (999) 123-45-67</p>
+    </footer>
+</body>
+</html>
